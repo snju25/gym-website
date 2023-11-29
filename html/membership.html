@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/prefixed.css">
+    <title>Contact US</title>
+</head>
+
+<body>
+    <header>
+        <script src="../components/menu.js"></script>
+    </header>
+    <main>
+        <section class="membership-form-section">
+            <h2>ML Strength</h2>
+        </section>
+        <section class="membership-form">
+            <h3>Your Details</h3>
+            <form class="form-grid-1" action="post">
+                <label for="first_name" class="required-label">
+                    <span class="hidden-for-mobile-view">First Name</span><i class="fas fa-user"></i>
+                </label>
+                <input name="first_name" id="first_name" type="text" required placeholder="First Name e.g. Sanjay"
+                    pattern="^[A-Z]{1}[A-Za-z'\- ]+$" maxlength="70">
+                <span class="error-message"><i class="fas fa-exclamation-circle"></i> Invalid First Name - Name Should
+                    start with an Upper case letter and should
+                    be alphabets only</span>
+
+                    <label for="last_name" class="required-label">
+                        <span class="hidden-for-mobile-view">Last Name</span><i class="fas fa-user"></i>
+                    </label>
+                <input name="last_name" id="last_name" type="text" required placeholder="Last Name e.g. Bhandari"
+                    pattern="^[A-Z]{1}[A-Za-z'\- ]+$" maxlength="70">
+                <span class="error-message"><i class="fas fa-exclamation-circle"></i>Invalid Last Name - Name Should
+                    start with an Upper case letter and should
+                    be alphabets only</span>
+
+                    <label for="email" class="required-label">
+                        <span class="hidden-for-mobile-view">Email</span><i class="fas fa-envelope"></i>
+                    </label>
+                <input name="email" id="email" type="email" required placeholder="Email e.g. youremail@gmail.com"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" maxlength="150">
+                <span class="error-message"><i class="fas fa-exclamation-circle"></i>Please Enter valid email</span>
+
+                <label for="phone">
+                    <span class="hidden-for-mobile-view">Phone</span><i class="fas fa-phone hidden-for-mobile-view"></i>
+                </label>
+                <input name="phone" class="hidden-for-mobile-view" id="phone" type="tel" placeholder="e.g. +61450812408" 
+                    pattern="^(\+?\(61\)|\(\+?61\)|\+?61|\(0[1-9]\)|0[1-9])?( ?-?[0-9]){7,9}$">
+                <span class="error-message"><i class="fas fa-exclamation-circle"></i>Phone Number must be numbers only
+                    starting with +61 0r 04</span>
+
+                    <label for="subject" class="required-label">
+                        <span class="hidden-for-mobile-view">Date of Birth</span><i class="fas fa-edit"></i>
+                    </label>
+                <input name="subject" id="subject" type="text" placeholder="Date Of Birth: DD-MM-YYYY" required
+                    pattern="^(3[01]|[12][0-9]|0?[1-9])(\/|-)(1[0-2]|0?[1-9])\2([0-9]{2})?[0-9]{2}$">
+                <span class="error-message"><i class="fas fa-exclamation-circle"></i>Follow this pattern :
+                    DD-MM-YYYY</span>
+                    
+                <section class="gender">
+                    <input type="radio" name="gender" id="male" required>
+                    <label for="male"><i class="fas fa-male"></i>Male</label>
+
+                    <input type="radio" name="gender" id="female" required>
+                    <label for="female"><i class="fas fa-female"></i>female</label>
+                </section>
+                <label for="address" class="required-label">
+                    <span class="hidden-for-mobile-view">Address</span><i class="fas fa-map-marker"></i>
+                </label>
+                <input type="text" name="address" id="address" placeholder="Full Street Address"
+                    pattern="^[A-Za-z0-9\s,\-\/]*$" required>
+                <span class="error-message"><i class="fas fa-exclamation-circle"></i>No special character allowed</span>
+
+                <label for="suburb" class="required-label">
+                    <span class="hidden-for-mobile-view">Suburb</span><i class="fas fa-map-marker"></i>
+                </label>
+                <input type="text" name="suburb" id="suburb" placeholder="Suburb" pattern="^[A-Za-z0-9\s]*$" required>
+                <span class="error-message"><i class="fas fa-exclamation-circle"></i>No special character allowed</span>
+
+                <label for="postcode" class="required-label">
+                    <span class="hidden-for-mobile-view">Postcode</span><i class="fas fa-map-marker"></i>
+                </label>
+                <input type="text" name="postcode" id="postcode" placeholder="Postcode" pattern="^\d{4}$" required>
+                <span class="error-message"><i class="fas fa-exclamation-circle"></i>Should be numbers only and 4 digits</span>
+
+                <label for="state" class="required-label">
+                    <span class="hidden-for-mobile-view">State</span><i class="fas fa-map-marker"></i>
+                </label>
+                <select name="state" id="state" required>
+                    <option value="" disabled selected>Select a state</option>
+                    <option value="ACT">Australian Capital Territory (ACT)</option>
+                    <option value="NSW">New South Wales (NSW)</option>
+                    <option value="NT">Northern Territory (NT)</option>
+                    <option value="QLD">Queensland (QLD)</option>
+                    <option value="SA">South Australia (SA)</option>
+                    <option value="TAS">Tasmania (TAS)</option>
+                    <option value="VIC">Victoria (VIC)</option>
+                    <option value="WA">Western Australia (WA)</option>
+                </select>
+                <span id="help-button"><i class="fas fa-question-circle"></i>Help?</span>
+                <input type="reset" value="Reset" id="reset-button">
+                <input type="submit" value="Submit" id="submit-button">
+                <video controls id="help-video">
+                    <source src="../images/videoAI.mp4" type="video/webm" />
+                    <source src="../images/videoAI.mp4" type="video/mp4" />
+                  </video>
+            </form>
+        </section>
+        
+    </main>
+    <footer>
+        <script src="../components/footer.js"></script>
+    </footer>
+</body>
+
+</html>

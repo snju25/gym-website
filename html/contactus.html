@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/prefixed.css">
+    <title>Contact US</title>
+</head>
+
+<body>
+    <header>
+        <script src="../components/menu.js"></script>
+    </header>
+    <main>
+        <section class="contact-us-page">
+            <h2>
+                We are here to Help
+            </h2>
+            <p>
+                Whether you have a question about membership, need help <br>
+                with your workout routine, our team is always happy to chat <br>
+                and offer guidance.
+            </p>
+        </section>
+        <section class="form-section">
+            <article>
+                <h2>Contact Form</h2>
+                <span>Address: 198 West 21th Street,Suite 721 Brisbane City </span>
+                <span>Phone: +6134567890 </span>
+                <span>Email:mlstrength@gmail.com</span>
+                <span>Wesbite:mlstrength.com</span>
+            </article>
+            <form class="form-grid" method="post" action="#">
+                <label for="location" class="required-label hidden-for-mobile-view">Location</label>
+                <select id="location" name="location">
+                    <option value="" disabled selected>Select a Gym</option>
+                    <option>Ashgrove</option>
+                    <option>Brisbane City</option>
+                    <option>Chermside</option>
+                    <option>Graceville</option>
+                    <option>Westlake</option>
+                </select>
+                <label for="first_name" class="required-label hidden-for-mobile-view">First Name</label>
+                <input name="first_name" id="first_name" type="text" required placeholder="First Name e.g. Sanjay"
+                    pattern="^[A-Z]{1}[A-Za-z'\- ]+$">
+                <span class="error-message">Invalid First Name - Name Should start with an Upper case letter and should
+                    be alphabets only</span>
+
+                <label for="last_name" class="required-label hidden-for-mobile-view">Last Name</label>
+                <input name="last_name" id="last_name" type="text" required placeholder="Last Name e.g. Bhandari"
+                    pattern="^[A-Z]{1}[A-Za-z'\- ]+$">
+                <span class="error-message">Invalid First Name - Name Should start with an Upper case letter and should
+                    be alphabets only</span>
+
+                <label for="email" class="required-label hidden-for-mobile-view">Email<i class="fas fa-envelope"></i></label>
+                <input name="email" id="email" type="email" required placeholder="Email e.g. youremail@gmail.com"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+                <span class="error-message"><i class="fas fa-exclamation-circle"></i>Please Enter valid email</span>
+
+                <label for="phone" class="hidden-for-mobile-view">Phone<i class="fas fa-phone"></i></label>
+                <input name="phone" class="hidden-for-mobile-view" id="phone" type="tel" placeholder="e.g. +61450812408"
+                    pattern="^(\+?\(61\)|\(\+?61\)|\+?61|\(0[1-9]\)|0[1-9])?( ?-?[0-9]){7,9}$">
+                <span class="error-message"><i class="fas fa-exclamation-circle"></i>Phone Number must be numbers only
+                    starting with +61 0r 04</span>
+
+                <label for="subject" class="hidden-for-mobile-view">Subject</label>
+                <input name="subject" class="hidden-for-mobile-view" id="subject" type="text"
+                    placeholder="Subject of query" maxlength="60">
+                <span class="error-message">Please enter Subject</span>
+
+                <label for="message" class="required-label hidden-for-mobile-view">Message</label>
+                <textarea id="message" required placeholder="Enter your message here" minlength="20"
+                    maxlength="500"></textarea>
+                <span class="error-message"><i class="fas fa-exclamation-circle"></i>Please leave a message of 20-500
+                    characters long</span>
+
+                <input type="submit" value="Send Message" id="submit_btn">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <script src="../components/footer.js"></script>
+    </footer>
+</body>
+
+</html>
